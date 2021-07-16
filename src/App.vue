@@ -4,6 +4,11 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <div v-for="n in 4" :key="n">
+      <div v-for="m in 4" :key="m">
+        <Pawn :player="n" :id="m-1"></Pawn>
+      </div>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -30,3 +35,9 @@
   color: #42b983;
 }
 </style>
+<script>
+import Pawn from "@/components/Pawn";
+export default {
+  components: {Pawn}
+}
+</script>
