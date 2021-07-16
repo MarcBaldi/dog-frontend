@@ -1,5 +1,7 @@
 # dog-frontend
 
+beautiful <3
+
 ## Project setup
 ```
 npm install
