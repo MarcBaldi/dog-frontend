@@ -1,33 +1,26 @@
 <template>
   <div class="game">
-    <div>
-      <p>API:  {{ message }}</p>
+    <div class="row">
+      <div class="col-8">
+        <Board/>
+      </div>
+      <div class="col-4">
+        <Status/>
+      </div>
     </div>
-    <div v-for="n in 4" :key="n">
-      <div v-for="m in 4" :key="m">
-        <Pawn :player="n" :id="m-1"></Pawn>
+    <div class="row">
+      <div class="col-12">
+        <Hand/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { fetchMessage } from '@/services/fetchers'
-import Pawn from "@/components/Pawn";
+import Board from "@/components/Board";
+import Hand from "@/components/Hand";
+import Status from "@/components/Status";
 export default {
-  components: {Pawn},
-  data() {
-    return {
-      message: 'offline'
-    }
-  },
-  async created() {
-    try {
-      this.message = await fetchMessage()
-    }
-    catch(error){
-      this.message = 'server error :('
-    }
-  }
+  components: {Status, Hand, Board}
 }
 </script>

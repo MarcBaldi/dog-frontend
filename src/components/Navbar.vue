@@ -42,12 +42,12 @@ export default {
         },
         {
           id: 1,
-          name: 'Game',
+          name: 'Play',
           path: '/game',
         },
         {
           id: 2,
-          name: 'About',
+          name: 'Help',
           path: '/about',
         },
       ],
