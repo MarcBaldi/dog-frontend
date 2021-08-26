@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/game">Game</router-link>
-    </div>
+    <navbar/>
     <router-view/>
   </div>
 </template>
@@ -19,21 +15,11 @@
   background-color: dimgray;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav {
-  color: #42b983;
-}
 </style>
 <script>
+
+import navbar from "@/components/Navbar";
 export default {
-  components: {}
+  components: {navbar}
 }
 </script>
