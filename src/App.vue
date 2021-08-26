@@ -2,12 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <div v-for="n in 4" :key="n">
-      <div v-for="m in 4" :key="m">
-        <Pawn :player="n" :id="m-1"></Pawn>
-      </div>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/game">Game</router-link>
     </div>
     <router-view/>
   </div>
@@ -20,6 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: dimgray;
 }
 
 #nav {
@@ -31,13 +28,12 @@
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
+#nav {
   color: #42b983;
 }
 </style>
 <script>
-import Pawn from "@/components/Pawn";
 export default {
-  components: {Pawn}
+  components: {}
 }
 </script>

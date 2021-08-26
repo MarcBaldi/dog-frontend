@@ -1,6 +1,6 @@
 <template>
   <div id="pic">
-    <img alt="a Pawn" :src="getFileName()">
+    <img alt="a Pawn" :src="getPawnSrc()">
   </div>
 </template>
 
@@ -12,23 +12,23 @@ export default {
     id: Number
   },
   methods: {
-    getFileName() {
-      let res = ""
+    getPawnSrc() {
+      let color = ""
       switch (this.player) {
-        case 0: res= "gelb"
+        case 0: color = "gelb"
               break
-        case 1: res= "rot"
+        case 1: color = "rot"
           break
-        case 2: res= "gruen"
+        case 2: color = "gruen"
           break
-        case 3: res= "blau"
+        case 3: color = "blau"
           break
-        default: res= "gelb"
+        default: color = "gelb"
           break
       }
       //console.log(require('@/assets/'+ res + this.id))
 
-      return require('@/assets/pawns/'+ res + this.id + '.png')
+      return require('@/assets/pawns/' + color + this.id + '.png')
     }
   }
 }
