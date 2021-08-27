@@ -2,6 +2,16 @@
 
 beautiful <3
 
+## Used Tech
+
+Javascript Framework: Vue
+
+unit testing: jest
+
+mocking: MSW
+
+Canvas: Konva
+
 ## Project setup
 ```
 npm install

@@ -1,12 +1,15 @@
 <template>
  <div id="card">
-   <p id="card-text">7</p>
+   <p id="card-text"> {{cardNumber}}</p>
  </div>
 </template>
 
 <script>
 export default {
-  name: "Card"
+  name: "Card",
+  props: {
+    cardNumber: Number
+  }
 }
 </script>
 

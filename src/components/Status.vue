@@ -1,8 +1,11 @@
 <template>
   <div id="game-status">
     <div>
-      <p>Status</p>
+      <h2>Status</h2>
       <p>API: {{ message }}</p>
+      <p>Round: {{ roundNumber }}</p>
+      <p>Player: {{ playerTurn }}</p>
+      <p>Phase: {{ gamePhase }}</p>
     </div>
   </div>
 </template>
@@ -13,7 +16,10 @@ export default {
   name: "Status",
   data() {
     return {
-      message: ''
+      message: '',
+      roundNumber: 0,
+      playerTurn: 0,
+      gamePhase: 0, // TODO: computed value
     }
   },
   async created() {
