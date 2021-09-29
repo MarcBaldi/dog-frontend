@@ -1,7 +1,8 @@
 <template>
   <div id="hand-cards" class="card-columns p-1">
       <Card v-for="(card, index) in handData" :key="index"
-            :card-number="card"
+            :card-id="card"
+            :index="index"
             class="card m-1"
       ></Card>
   </div>
