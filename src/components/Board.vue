@@ -2,6 +2,7 @@
   <div id="board">
     <v-stage :config="configKonva">
       <v-layer id="board-layer">
+        <field-node :config="configCircle"></field-node>
         <v-circle :config="configCircle"></v-circle>
         <v-circle :config="configCircle2"></v-circle>
       </v-layer>
@@ -19,13 +20,13 @@
 </template>
 
 <script>
-//import Pawn from "@/components/Pawn";
+import FieldNode from "@/components/FieldNode";
 
 const pawn =require( '@/assets/pawns/' + 'rot2' + '.png')
 
 export default {
   name: "Board",
-  //components: {Pawn},
+  components: {FieldNode},
   data() {
     return {
       configKonva: {
